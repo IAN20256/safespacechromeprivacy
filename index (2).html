@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafeSpace para Chrome · Aviso de privacidad</title>
+<meta name="description" content="Aviso de privacidad de la extensión SafeSpace para Chrome.">
+<style>
+  :root {
+    --bg: #F5F3EE; --surface: #FFFFFF; --text: #26302A; --muted: #5E6860;
+    --line: #E3E1D9; --accent: #6F9A7E; --accent-strong: #4C7660; --accent-soft: #DFEADF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #161A18; --surface: #1F2522; --text: #E7ECE8; --muted: #9AA59D;
+      --line: #2F3833; --accent: #86B396; --accent-strong: #A5CBB1; --accent-soft: #2A3A30;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; }
+  .brand svg { width: 26px; height: 26px; color: var(--accent); }
+  .langs { display: flex; background: var(--accent-soft); border-radius: 999px; padding: 3px; }
+  .langs button {
+    border: 0; background: transparent; color: var(--accent-strong); font: inherit; font-size: 14px; font-weight: 600;
+    padding: 5px 12px; border-radius: 999px; cursor: pointer;
+  }
+  .langs button[aria-pressed="true"] { background: var(--surface); color: var(--text); }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -.3px; }
+  .date { color: var(--muted); margin: 0 0 24px; font-size: 14px; }
+  .summary {
+    background: var(--accent-soft); border-radius: 16px; padding: 16px 18px; margin-bottom: 28px;
+  }
+  .summary ul { margin: 6px 0 0; padding-left: 20px; }
+  h2 { font-size: 19px; margin: 30px 0 8px; }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); }
+  a { color: var(--accent-strong); }
+  table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; margin: 8px 0; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  th { background: var(--bg); font-weight: 600; }
+  [data-lang] { display: none; }
+  [data-lang].on { display: block; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c0-6 0-9-5-12 4 0 6 2 5 6 0-6 3-9 7-9-1 5-3 8-7 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      SafeSpace para Chrome
+    </div>
+    <div class="langs" role="group" aria-label="Idioma / Language / Langue">
+      <button data-set="es">Español</button>
+      <button data-set="en">English</button>
+      <button data-set="fr">Français</button>
+    </div>
+  </header>
+
+  <!-- ===================== ESPAÑOL ===================== -->
+  <main data-lang="es">
+    <h1>Aviso de privacidad</h1>
+    <p class="date">Última actualización: 19 de noviembre de 2026</p>
+
+    <div class="summary">
+      <strong>En resumen</strong>
+      <ul>
+        <li>Todo lo que escribes y registras se guarda solo en tu navegador.</li>
+        <li>La extensión no envía tus datos a internet, ni a nosotros ni a nadie.</li>
+        <li>No hay cuentas, anuncios, inteligencia artificial ni herramientas de análisis.</li>
+      </ul>
+    </div>
+
+    <p>Este aviso aplica a la extensión <strong>SafeSpace: diario y calma</strong> para Google Chrome (“la extensión”). Es distinta de la app SafeSpace para Android, que tiene su propio <a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">aviso de privacidad</a>.</p>
+
+    <h2>Qué datos maneja la extensión</h2>
+    <table>
+      <tr><th>Dato</th><th>Para qué se usa</th></tr>
+      <tr><td>Entradas del diario</td><td>Mostrarte tu diario y guardar lo que escribes, incluido el borrador.</td></tr>
+      <tr><td>Registros de ánimo</td><td>Mostrar tu ánimo de los últimos días y tu racha.</td></tr>
+      <tr><td>Progreso de la planta</td><td>Saber cuánto ha crecido tu planta.</td></tr>
+      <tr><td>Ajustes</td><td>Recordar tu idioma y si quieres voz en las meditaciones.</td></tr>
+    </table>
+
+    <h2>Dónde se guardan</h2>
+    <p>Todos estos datos se guardan únicamente en tu dispositivo, en el almacenamiento local de Chrome (<code>chrome.storage.local</code>). No se sincronizan con tu cuenta de Google ni se suben a ningún servidor. Nosotros no podemos verlos ni recuperarlos.</p>
+
+    <h2>Qué no hacemos</h2>
+    <ul>
+      <li>No vendemos, compartimos ni transferimos tus datos a terceros.</li>
+      <li>No usamos tus datos para publicidad ni para evaluar tu solvencia o crédito.</li>
+      <li>No usamos cookies, rastreadores ni herramientas de análisis.</li>
+      <li>No usamos inteligencia artificial para leer ni responder lo que escribes.</li>
+    </ul>
+
+    <h2>Permisos</h2>
+    <p>La extensión solo pide el permiso <strong>“storage”</strong>, necesario para guardar tus datos en tu dispositivo. No puede leer las páginas que visitas ni tu historial.</p>
+
+    <h2>Voz de las meditaciones</h2>
+    <p>Si activas la voz, las meditaciones se leen con el sintetizador de voz de tu navegador. Algunas voces de Chrome se procesan en servidores de Google; en ese caso solo se envía el texto fijo de la meditación, nunca tu diario ni tus datos. Puedes desactivar la voz en Ajustes.</p>
+
+    <h2>Enlaces externos</h2>
+    <p>La pantalla de Ayuda incluye un enlace a findahelpline.com. Solo se abre si lo tocas, y ese sitio tiene su propia política de privacidad.</p>
+
+    <h2>Tus opciones</h2>
+    <ul>
+      <li><strong>Borrar:</strong> puedes borrar cualquier entrada del diario. Al desinstalar la extensión, Chrome elimina todos sus datos.</li>
+      <li><strong>Exportar e importar:</strong> desde Ajustes puedes descargar una copia de seguridad (archivo JSON) y volver a importarla. Ese archivo queda bajo tu control.</li>
+    </ul>
+
+    <h2>Cambios a este aviso</h2>
+    <p>Si la extensión cambia la forma en que maneja tus datos, actualizaremos este aviso y la fecha de arriba antes de publicar el cambio.</p>
+
+    <h2>Contacto</h2>
+    <p>Si tienes dudas sobre este aviso, escríbenos a <a href="mailto:azilx31593@gmail.com">azilx31593@gmail.com</a>.</p>
+  </main>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <main data-lang="en">
+    <h1>Privacy policy</h1>
+    <p class="date">Last updated: November 19, 2026</p>
+
+    <div class="summary">
+      <strong>In short</strong>
+      <ul>
+        <li>Everything you write and log is stored only in your browser.</li>
+        <li>The extension never sends your data to the internet, to us or to anyone else.</li>
+        <li>No accounts, no ads, no artificial intelligence and no analytics.</li>
+      </ul>
+    </div>
+
+    <p>This policy applies to the <strong>SafeSpace: journal &amp; calm</strong> extension for Google Chrome (“the extension”). It is separate from the SafeSpace Android app, which has its own <a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">privacy policy</a>.</p>
+
+    <h2>What data the extension handles</h2>
+    <table>
+      <tr><th>Data</th><th>What it's used for</th></tr>
+      <tr><td>Journal entries</td><td>Showing your journal and saving what you write, including your draft.</td></tr>
+      <tr><td>Mood check-ins</td><td>Showing your mood over recent days and your streak.</td></tr>
+      <tr><td>Plant progress</td><td>Knowing how much your plant has grown.</td></tr>
+      <tr><td>Settings</td><td>Remembering your language and whether you want voice in meditations.</td></tr>
+    </table>
+
+    <h2>Where it is stored</h2>
+    <p>All of this data is stored only on your device, in Chrome's local storage (<code>chrome.storage.local</code>). It is not synced to your Google account or uploaded to any server. We cannot see it or recover it.</p>
+
+    <h2>What we don't do</h2>
+    <ul>
+      <li>We don't sell, share or transfer your data to third parties.</li>
+      <li>We don't use your data for advertising or to determine creditworthiness.</li>
+      <li>We don't use cookies, trackers or analytics.</li>
+      <li>We don't use artificial intelligence to read or respond to what you write.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <p>The extension only requests the <strong>“storage”</strong> permission, which it needs to save your data on your device. It cannot read the pages you visit or your browsing history.</p>
+
+    <h2>Meditation voice</h2>
+    <p>If you turn on voice, meditations are read aloud by your browser's speech synthesizer. Some Chrome voices are processed on Google's servers; in that case only the fixed meditation text is sent, never your journal or your data. You can turn voice off in Settings.</p>
+
+    <h2>External links</h2>
+    <p>The Help screen includes a link to findahelpline.com. It only opens if you tap it, and that site has its own privacy policy.</p>
+
+    <h2>Your choices</h2>
+    <ul>
+      <li><strong>Delete:</strong> you can delete any journal entry. When you uninstall the extension, Chrome removes all of its data.</li>
+      <li><strong>Export and import:</strong> in Settings you can download a backup (JSON file) and import it again. That file stays under your control.</li>
+    </ul>
+
+    <h2>Changes to this policy</h2>
+    <p>If the extension changes how it handles your data, we will update this policy and the date above before releasing the change.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this policy, write to <a href="mailto:azilx31593@gmail.com">azilx31593@gmail.com</a>.</p>
+  </main>
+
+  <!-- ===================== FRANÇAIS ===================== -->
+  <main data-lang="fr">
+    <h1>Politique de confidentialité</h1>
+    <p class="date">Dernière mise à jour : 19 novembre 2026</p>
+
+    <div class="summary">
+      <strong>En bref</strong>
+      <ul>
+        <li>Tout ce que vous écrivez et enregistrez reste uniquement dans votre navigateur.</li>
+        <li>L'extension n'envoie jamais vos données sur internet, ni à nous ni à personne.</li>
+        <li>Pas de compte, pas de publicité, pas d'intelligence artificielle et pas d'outils d'analyse.</li>
+      </ul>
+    </div>
+
+    <p>Cette politique s'applique à l'extension <strong>SafeSpace : journal et calme</strong> pour Google Chrome (« l'extension »). Elle est distincte de l'application Android SafeSpace, qui a sa propre <a href="https://ian20256.github.io/AvisoPrivacidadSafeSpace/">politique de confidentialité</a>.</p>
+
+    <h2>Données gérées par l'extension</h2>
+    <table>
+      <tr><th>Donnée</th><th>Utilisation</th></tr>
+      <tr><td>Entrées du journal</td><td>Afficher votre journal et enregistrer ce que vous écrivez, brouillon compris.</td></tr>
+      <tr><td>Suivi de l'humeur</td><td>Afficher votre humeur des derniers jours et votre série.</td></tr>
+      <tr><td>Progression de la plante</td><td>Savoir combien votre plante a grandi.</td></tr>
+      <tr><td>Réglages</td><td>Mémoriser votre langue et si vous voulez la voix dans les méditations.</td></tr>
+    </table>
+
+    <h2>Où elles sont stockées</h2>
+    <p>Toutes ces données sont stockées uniquement sur votre appareil, dans le stockage local de Chrome (<code>chrome.storage.local</code>). Elles ne sont ni synchronisées avec votre compte Google ni envoyées à un serveur. Nous ne pouvons ni les voir ni les récupérer.</p>
+
+    <h2>Ce que nous ne faisons pas</h2>
+    <ul>
+      <li>Nous ne vendons, ne partageons ni ne transférons vos données à des tiers.</li>
+      <li>Nous n'utilisons pas vos données pour la publicité ni pour évaluer votre solvabilité.</li>
+      <li>Nous n'utilisons ni cookies, ni traceurs, ni outils d'analyse.</li>
+      <li>Nous n'utilisons pas d'intelligence artificielle pour lire ou répondre à ce que vous écrivez.</li>
+    </ul>
+
+    <h2>Autorisations</h2>
+    <p>L'extension demande uniquement l'autorisation <strong>« storage »</strong>, nécessaire pour enregistrer vos données sur votre appareil. Elle ne peut pas lire les pages que vous visitez ni votre historique.</p>
+
+    <h2>Voix des méditations</h2>
+    <p>Si vous activez la voix, les méditations sont lues par la synthèse vocale de votre navigateur. Certaines voix de Chrome sont traitées sur les serveurs de Google ; dans ce cas, seul le texte fixe de la méditation est envoyé, jamais votre journal ni vos données. Vous pouvez désactiver la voix dans les Réglages.</p>
+
+    <h2>Liens externes</h2>
+    <p>L'écran d'aide contient un lien vers findahelpline.com. Il ne s'ouvre que si vous le touchez, et ce site a sa propre politique de confidentialité.</p>
+
+    <h2>Vos choix</h2>
+    <ul>
+      <li><strong>Supprimer :</strong> vous pouvez supprimer n'importe quelle entrée du journal. Lorsque vous désinstallez l'extension, Chrome supprime toutes ses données.</li>
+      <li><strong>Exporter et importer :</strong> dans les Réglages, vous pouvez télécharger une sauvegarde (fichier JSON) et l'importer à nouveau. Ce fichier reste sous votre contrôle.</li>
+    </ul>
+
+    <h2>Modifications de cette politique</h2>
+    <p>Si l'extension change la façon dont elle gère vos données, nous mettrons à jour cette politique et la date ci-dessus avant de publier le changement.</p>
+
+    <h2>Contact</h2>
+    <p>Pour toute question sur cette politique, écrivez à <a href="mailto:azilx31593@gmail.com">azilx31593@gmail.com</a>.</p>
+  </main>
+
+  <footer>SafeSpace · Ian Amaro</footer>
+</div>
+
+<script>
+  (function () {
+    var valid = ['es', 'en', 'fr'];
+    var fromUrl = new URLSearchParams(location.search).get('lang');
+    var fromNav = (navigator.language || 'es').slice(0, 2).toLowerCase();
+    var lang = valid.indexOf(fromUrl) > -1 ? fromUrl : (valid.indexOf(fromNav) > -1 ? fromNav : 'es');
+    function set(l) {
+      lang = l;
+      document.documentElement.lang = l;
+      document.querySelectorAll('[data-lang]').forEach(function (el) { el.classList.toggle('on', el.getAttribute('data-lang') === l); });
+      document.querySelectorAll('[data-set]').forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-set') === l); });
+      document.title = { es: 'SafeSpace para Chrome · Aviso de privacidad', en: 'SafeSpace for Chrome · Privacy policy', fr: 'SafeSpace pour Chrome · Politique de confidentialité' }[l];
+      document.querySelector('.brand').lastChild.textContent = { es: ' SafeSpace para Chrome', en: ' SafeSpace for Chrome', fr: ' SafeSpace pour Chrome' }[l];
+    }
+    document.querySelectorAll('[data-set]').forEach(function (b) { b.addEventListener('click', function () { set(b.getAttribute('data-set')); }); });
+    set(lang);
+  })();
+</script>
+</body>
+</html>
